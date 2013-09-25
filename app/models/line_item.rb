@@ -8,4 +8,8 @@ class LineItem < ActiveRecord::Base
   	product.price * quantity
   end
 
+  def price
+  	product.price 
+  end
+
 end
