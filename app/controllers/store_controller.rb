@@ -4,7 +4,7 @@ class StoreController < ApplicationController
     if session[:counter] == nil
     	session[:counter] = 1
     else
-    	session[:counter] = session[:counter] + 1
+    	session[:counter] += 1
     end
   end
 end
