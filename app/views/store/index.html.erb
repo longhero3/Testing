@@ -3,7 +3,9 @@
 <% end %>
 <div class= "store">
 <h1> Your pragmatic catalog</h1>
-
+<% if session[:counter] >  5 %> 
+	<h2> visited: <%= pluralize(session[:counter], "visit") %> </h2>
+<% end %> 
 <% @products.each do |product| %>
   <div class="entry">
     <%= image_tag(product.image_url) %>
@@ -11,6 +13,7 @@
     <%= sanitize(product.description) %>
     <div class="price_line">
       <span class="price">$<%= product.price %></span>
+      <%= button_to 'Add to cart', line_items_path(product_id: product) %>
     </div>
   </div>
 <% end %>
