@@ -1,7 +1,6 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<div class= "store">
 <h1> Your pragmatic catalog</h1>
 <% if session[:counter] >  5 %> 
 	<h2> visited: <%= pluralize(session[:counter], "visit") %> </h2>
@@ -17,4 +16,4 @@
     </div>
   </div>
 <% end %>
-</div>
+
