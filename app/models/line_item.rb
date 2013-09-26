@@ -12,4 +12,8 @@ class LineItem < ActiveRecord::Base
   	product.price 
   end
 
+  def delete_one(id)
+  	 product.price += 123.0
+  end
+
 end

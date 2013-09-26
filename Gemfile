@@ -5,7 +5,10 @@ gem 'rails', '3.2.14'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+
 gem 'pg'
+gem 'highline'
+gem 'pivotal-tracker'
 
 
 # Gems used only for assets and not required
@@ -32,7 +35,7 @@ group :test, :development do
 	gem 'factory_girl_rails'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.3.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
