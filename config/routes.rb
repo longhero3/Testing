@@ -10,6 +10,8 @@ Depot::Application.routes.draw do
   resources :products
   root to: 'store#index', as: 'store'
 
+  get 'cart/', to: 'carts/6#show'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

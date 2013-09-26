@@ -8,6 +8,7 @@
  			<td><%= pluralize(item.quantity, "time")%></td>
  			<td><%= item.product.title %></td>
  			<td class="item_price"><%= number_to_currency(item.total_price) %></td>
+ 			<td><%= button_to "Delete this book", line_item_path(item.id), method: :delete %></td>
  		</tr>
  	<% end %>
  	<tr class="total_line">

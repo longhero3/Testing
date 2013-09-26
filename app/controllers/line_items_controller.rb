@@ -42,7 +42,7 @@ class LineItemsController < ApplicationController
   def create
     @cart = current_cart
     product = Product.find(params[:product_id])
-    @line_item = @cart.add_product(product.id, product.price)
+    @line_item = @cart.add_product(product.id)
     session[:counter]=0
     respond_to do |format|
       if @line_item.save
@@ -78,7 +78,7 @@ class LineItemsController < ApplicationController
     @line_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to line_items_url }
+      format.html { redirect_to @line_item.cart }
       format.json { head :no_content }
     end
   end

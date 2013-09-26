@@ -11,9 +11,6 @@ class Product < ActiveRecord::Base
 		:message => 'Must be gif, pnj, or jpg image'
 	}
 
-	def price
-		self.price
-
 	private 
 		def ensure_not_referenced_by_any_line_item
 			if line_items.empty?

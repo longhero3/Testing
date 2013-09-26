@@ -18,9 +18,5 @@ test:
   database: rails_test
 
 production:
-  adapter: postgresql
   database: rails_production
-  pool: 5
-  timeout: 5000
-  username: long
-  password: 123
+  
